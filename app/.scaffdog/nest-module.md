@@ -43,13 +43,14 @@ export class {{ inputs.value | pascal }}Controller {
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
+import { PrismaService } from 'src/nest-module/prisma.service';
 import { {{ inputs.value | pascal }}Controller } from './{{ inputs.value | kebab }}.controller';
 import { {{ inputs.value | pascal }}Service } from './{{ inputs.value | kebab }}.service';
 
 @Module({
   controllers: [{{ inputs.value | pascal }}Controller],
   providers: [
+    // Be careful not to forget the "@Injectable" decorator.
     {{ inputs.value | pascal }}Service,
     PrismaService,
     // inject dependencies
