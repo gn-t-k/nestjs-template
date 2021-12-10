@@ -10,12 +10,8 @@ questions:
 # `{{ inputs.value | kebab }}/{{ inputs.value | kebab }}.controller.ts`
 
 ```typescript
-import {
-  Controller,
-  HttpException,
-  HttpStatus,
-} from '@nestjs/common';
-import { InvalidArgumentError } from 'src/__shared__/invalid-argument-error';
+import { Controller } from '@nestjs/common';
+import { handleError } from 'src/__shared__/error/handle-error';
 import { {{ inputs.value | pascal }}Service } from './{{ inputs.value | kebab }}.service';
 
 @Controller('{{ inputs.value | kebab }}')
@@ -24,18 +20,6 @@ export class {{ inputs.value | pascal }}Controller {
 
   // write request/response, try/catch
   // reference: https://docs.nestjs.com/controllers
-
-  private handleError = (error: unknown) => {
-    if (error instanceof InvalidArgumentError) {
-      throw new HttpException(error.message, HttpStatus.BAD_REQUEST);
-    } else {
-      throw new HttpException(
-        'internal server error',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
-  };
-}
 
 ```
 
