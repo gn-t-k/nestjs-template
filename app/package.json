@@ -24,7 +24,9 @@
     "scaffold:vo": "yarn scaffdog generate value-object",
     "scaffold:ar": "yarn scaffdog generate aggregate-root",
     "scaffold:uc": "yarn scaffdog generate use-case",
-    "scaffold:nm": "yarn scaffdog generate nest-module"
+    "scaffold:nm": "yarn scaffdog generate nest-module",
+    "scaffold:cm-if": "yarn scaffdog generate command-interface",
+    "scaffold:qr-if": "yarn scaffdog generate query-interface"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
