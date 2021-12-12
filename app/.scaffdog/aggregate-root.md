@@ -54,12 +54,12 @@ describe('{{ inputs.value | pascal }}', () => {
 
 ```
 
-# `{{ inputs.value | kebab }}/service/command/.gitkepp`
+# `{{ inputs.value | kebab }}/service/command/.gitkeep`
 
 ```git config
 ```
 
-# `{{ inputs.value | kebab }}/service/query/.gitkepp`
+# `{{ inputs.value | kebab }}/service/query/.gitkeep`
 
 ```git config
 ```
